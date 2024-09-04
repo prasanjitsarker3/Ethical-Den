@@ -1,12 +1,19 @@
+"use client";
 import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const WhyStudy = () => {
   return (
     <div className=" w-full container mx-auto md:px-0 px-8">
       <div className="w-full flex flex-col md:flex-row justify-between gap-24  py-16">
-        <div className=" md:w-1/2 w-full h-full mx-auto bg-blue-100">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className=" md:w-1/2 w-full h-full mx-auto bg-blue-100"
+        >
           <Image
             src={
               "https://img.freepik.com/free-photo/two-students-studying-together-online-with-laptop-park_1150-4115.jpg?ga=GA1.1.1828852587.1722179846&semt=ais_hybrid"
@@ -16,8 +23,13 @@ const WhyStudy = () => {
             height={500}
             className=" h-[26rem] w-full shadow-md rounded-sm"
           />
-        </div>
-        <div className=" md:w-1/2 w-full mx-auto">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className=" md:w-1/2 w-full mx-auto"
+        >
           <div className=" space-y-4">
             <h1 className=" text-3xl md:text-5xl font-bold text-slate-800">
               Why Study
@@ -54,11 +66,11 @@ const WhyStudy = () => {
                 USA hosts more than a million international students{" "}
               </h1>
             </div>
-            <button className=" px-3 py-1 bg-[#f6941e] text-white flex items-center gap-2">
+            <button className=" px-4 py-2 bg-[#f6941e] text-white flex items-center gap-2">
               See More <ArrowRight />
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="w-full flex flex-col md:flex-row justify-between gap-24  py-16">
         <div className=" md:w-1/2 w-full mx-auto">
@@ -82,7 +94,7 @@ const WhyStudy = () => {
               skills and environmental quality.
             </p>
 
-            <button className=" px-3 py-1 border border-[#f6941e] hover:bg-[#f6941e] hover:text-white text-slat-800 flex items-center gap-2">
+            <button className=" px-4 py-2 border border-[#f6941e] hover:bg-[#f6941e] hover:text-white text-slat-800 flex items-center gap-2">
               See More <ArrowRight />
             </button>
           </div>

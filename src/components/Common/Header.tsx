@@ -56,12 +56,15 @@ const Header = () => {
   }, []);
 
   return (
-    <header
+    <motion.header
       className={`${
         scrolling
           ? "bg-white dark:bg-slate-800 fixed w-full z-40"
           : "fixed w-full z-40 bg-white"
       }`}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8 }}
     >
       <div className="container mx-auto py-3 flex justify-between items-center md:px-0 px-0">
         <div className="">
@@ -83,7 +86,7 @@ const Header = () => {
             <h1 className="text-lg text-slate-800 hover:text-[#f6941e] cursor-pointer">
               About us
             </h1>
-            <h1 className="text-lg text-[#f6941e] flex items-center">
+            <h1 className="text-lg text-[#f6941e] flex items-center cursor-pointer">
               Study Distention <ChevronDown className="mt-1" />
             </h1>
             <h1 className="text-lg text-slate-800 flex items-center hover:text-[#f6941e] cursor-pointer">
@@ -137,7 +140,7 @@ const Header = () => {
           </button>
         </div>
       </motion.div>
-    </header>
+    </motion.header>
   );
 };
 

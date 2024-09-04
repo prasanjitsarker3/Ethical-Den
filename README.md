@@ -1,40 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NORTHWAY
 
-## Getting Started
+NORTHWAY Educational Consultancy guides students through the process of studying in the USA, highlighting key benefits, costs, and career opportunities. The website also features student testimonials, blogs, and FAQs to support international students.
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+To create a new Next.js application and include Tailwind CSS, TypeScript, Framer Motion, and NextUI, follow these steps:
+
+1. **Create a new Next.js application with TypeScript**
+
+```js
+ npx create-next-app@latest my-app-name --typescript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Navigate to your project directory**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```js
+ cd my-app-name
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Install Tailwind CSS and its dependencies**
 
-## Learn More
+```js
+ npm install -D tailwindcss postcss autoprefixer
+ npx tailwindcss init -p
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Install Framer Motion**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```js
+  npm install framer-motion
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. **Install NextUI**
 
-## Deploy on Vercel
+```js
+  npm install @nextui-org/react
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6. **Ensure all dependencies are installed**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# NextPortfolio
-# Ethical-Den
-# Ethical-Den
-# Ethical-Den
+```js
+  npm install
+```
+
+### Usage
+
+1. **Start the development server:**
+
+```js
+npm run dev
+```
+
+# Live Link
+
+[Live Application] https://ethical1.vercel.app

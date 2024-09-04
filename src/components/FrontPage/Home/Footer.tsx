@@ -45,9 +45,8 @@ const Footer = () => {
           <div className=" space-y-2 md:text-start text-center">
             <h1 className=" text-2xl "> Contact Us</h1>
             <h1 className=" flex items-center md:justify-start justify-center gap-2">
-              <MapPin size={36} className="text-[#f6941e]" /> Kha-12/2(4th
-              floor), Pragati Sarani, Gulshan, Dhaka-1212, (Near American
-              Embassy)
+              <MapPin size={24} className="text-[#f6941e] " /> Kha-12/2(4th
+              floor), Pragati Sarani, Gulshan, Dhaka-1212
             </h1>
             <h1 className=" flex items-center md:justify-start justify-center gap-2">
               <Phone size={18} className="text-[#f6941e]" />

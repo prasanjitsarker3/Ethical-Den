@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
@@ -15,18 +16,26 @@ const Banner = () => {
         className="z-0"
       />
 
-      {/* Black overlay */}
       <div className="absolute inset-0 bg-black opacity-70 z-10"></div>
 
-      {/* Centered text inside container */}
       <div className="container mx-auto h-full relative z-20">
-        <div className="flex justify-between items-center h-full md:px-0 px-8">
-          <h1 className="text-4xl md:text-5xl font-semibold text-white">
+        <div className="flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-6 h-full md:px-0 px-8">
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="text-4xl md:text-5xl font-semibold text-white"
+          >
             Study In USA
-          </h1>
-          <h1 className="text-lg md:text-xl font-light text-white">
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="text-lg md:text-xl font-light text-white"
+          >
             Home / Study / USA
-          </h1>
+          </motion.h1>
         </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
 import { Quote, Star } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const ClientSay = () => {
   const clietSays = [
@@ -48,7 +50,11 @@ const ClientSay = () => {
 
       <div className=" grid grid-cols-1 md:grid-cols-3 gap-8">
         {clietSays.map((data) => (
-          <div key={data.id}>
+          <motion.div
+            key={data.id}
+            whileHover={{ scale: 1.08 }}
+            transition={{ type: "spring", stiffness: 200, duration: 0.5 }}
+          >
             <div
               className={`bg-white shadow-md p-5 space-y-3 ${
                 data.id === 2 ? "border-b border-b-[#f6941e]" : ""
@@ -75,7 +81,7 @@ const ClientSay = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
